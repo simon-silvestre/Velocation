@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <title>VéLocation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <script src="map.js" async></script>
+  <script src="popup.js" async></script>
+
+</head>
+
+<body>
+  <div id="page">
+    <div id="navBar">
+      <img src="assets/Logo.png" atl="logo Love Site" id="logo">
+      <ul id="navElements">
+        <li><a class="link_menu" href="#page">Home</a></li>
+        <li><a class="link_menu" href="#container_Velos">Réservations</a></li>
+        <li><a class="link_menu" href="#corps">Contact</a></li>
+      </ul>
+    </div>
+
+    <h1><span id="titre">Vé</span>Location</h1>
+    <div class="container_Slider">
+      <img src="assets/slider-image2.jpg" alt="image de velo" />
+    </div>
+
+    <div id="container_icons">
+
+      <div class="item_icons">
+        <div id="iconMarker">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <p>1- Trouver une station</p>
+      </div>
+
+      <div class="item_icons">
+        <div id="iconMobile">
+          <i class="fas fa-mobile"></i>
+        </div>
+        <p>2- Verifier les disponibilités de la stations</p>
+      </div>
+
+      <div class="item_icons">
+        <div id="iconVelo">
+          <i class="fas fa-bicycle"></i>
+        </div>
+        <p>3- Réserver votre vélo</p>
+      </div>
+    </div>
+
+    <div id="container_Velos">
+
+      <div id="containerTitreReservation">
+        <h2>Réservations</h2>
+      </div>
+
+      <div id="container_Map">
+        <div id="mapid"></div>
+      </div>
+
+      <div id="container_Stations">
+        <div id="stations_descriptions">
+          <ul id="station_Details">
+            <li>
+              <span id="nom_Station"></span>
+            </li>
+            <li>
+              Adresse : <span id="adresse_Station"></span>
+            </li>
+            <li>
+              Places disponibles : <span id="places_Dispo"></span>
+            </li>
+            <li>
+              Vélos disponibles : <span id="velos_Dispo"></span>
+            </li>
+          </ul>
+
+          <form id="contact-form" action="index.html" method="post" onsubmit="return checkforblank()">
+            <input type="text" class="contact-form-text" placeholder="Nom" required>
+            <input type="text" class="contact-form-text2" placeholder="Prénom" required>
+            <div id="contact-form-btn">Réserver</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Reservation_popup">
+      <div id="textPopup">
+        <p>Vélo réservé à la station <span id="station_reserver">station</span></p>
+        <p>Temps restant : <span id="timer">compte a rebours</span> avant l'expiration de la session</p>
+      </div>
+    </div>
+
+    <div class="Reservation_popup Reservation_expire">
+      <p id="text_expire">réservation expiré</p>
+    </div>
+
+      <div class="container">
+        <div id="containerTitreform">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="nom" required="required">
+              <span class="text">Nom</span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="prenom" required="required">
+              <span class="text">Prénom</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox">
+              <input type="email" name="email" required="required">
+              <span class="text">Email</span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="inputBox">
+              <input type="text" name="mobile" required="required">
+              <span class="text">Mobile</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox textarea">
+              <textarea name="message" required="required"></textarea>
+              <span class="text">Votre message</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <input type="submit" name="contactForm" value="Envoyer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="containerFooter">
+        <div id="leftSide">
+          <p>silvestre.simon@icloud.com</p>
+          <p><a href="http://www.simon-projets.com">www.simon-projets.com</a></p>
+        </div>
+        <div id="rightSide">
+          <img src="assets/Logo.png" alt="logo entreprise">
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

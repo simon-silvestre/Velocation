@@ -1,0 +1,770 @@
+@font-face
+{
+	font-family: 'roboto_Bold';
+	src: url(roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face
+{
+	font-family: 'roboto_med';
+	src: url(roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face
+{
+	font-family: 'roboto_reg';
+	src: url(roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face
+{
+	font-family: 'bubblegum';
+	src: url(Bubblegum_Sans/BubblegumSans-Regular.ttf) format('truetype');
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'roboto_med';
+}
+
+#navBar
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3%;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  z-index: 2;
+  background-color: #FFF;
+  box-shadow: 0px -13px 20px 0px #4048C9;
+}
+
+#navElements
+{
+    display: flex;
+    justify-content: right;
+    margin-right: 5%;
+}
+
+.link_menu
+{
+  font-family: 'roboto_reg';
+  font-size: 15px;
+  color: #01087C;
+  margin: 30px;
+}
+
+.link_menu:hover
+{
+  color: #FFF;
+  border: solid 2px #4048C9;
+  border-radius: 25px;
+  margin: 13px;
+  padding: 2px 15px;
+  background-color: #4048C9;
+}
+
+#logo
+{
+  margin-left: 5%;
+  width: 7%;
+  cursor: pointer;
+  transform: scale(1);
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+#logo:hover
+{
+  transform: scale(1.1);
+}
+
+h1
+{
+  position: absolute;
+  margin-top: 12.3%;
+  left: 35%;
+  font-family: 'bubblegum';
+  font-size: 7vw;
+  z-index: 1;
+  width: 30vw;
+}
+
+#titre
+{
+  color: #4048C9;
+  font-family: 'bubblegum';
+}
+
+.container_Slider
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.container_Slider img
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+  position: relative;
+}
+
+#container_icons
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8% 5% 1%;
+}
+
+.item_icons
+{
+  position: relative;
+  width: 200px;
+}
+
+#iconMarker
+{
+  width: 57px;
+  margin: auto;
+}
+
+#iconMobile
+{
+  width: 47px;
+  margin: auto;
+}
+
+#iconVelo
+{
+  width: 94px;
+  height: 67px;
+  margin: auto;
+}
+
+.item_icons i
+{
+  font-size: 75px;
+  position: relative;
+  color: #4048C9;
+}
+
+.item_icons p
+{
+  position: relative;
+  top: 20px;
+  left: 0;
+  font-size: 20px;
+  color: #4048C9;
+  font-family: 'roboto_med';
+  text-align: center;
+}
+
+#containerTitreReservation
+{
+	position: relative;
+	width: 100%;
+	margin: auto;
+	padding-top: 11vh;
+}
+
+h2
+{
+	font-family: 'bubblegum';
+	font-size: 5vw;
+	z-index: 1;
+	width: 24vw;
+	margin: auto;
+	margin-bottom: 4%;
+}
+
+#container_Velos
+{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+  margin-top: 8vh;
+}
+
+#container_Map
+{
+  width: 60%;
+  height: 48vh;
+  position: relative;
+  top: 0;
+  left: 0;
+	margin: auto;
+}
+
+#mapid
+{
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  margin: auto;
+  box-shadow: 1px 1px 12px #757575;
+}
+
+#text_Acueil_Station
+{
+	width: 85%;
+	height: 75%;
+	left: 30px;
+	top: 25%;
+	position: absolute;
+	text-align: center;
+	font-size: 23px;
+	color: #4988c7;
+}
+
+#container_Stations
+{
+  width: 25%;
+  height: 48vh;
+  position: relative;
+  top: 0;
+  background-color: #f4f8fa;
+  border-left: 2px solid #4048C9;
+  box-shadow: 1px 1px 12px #757575;
+  margin-bottom: 5%;
+	margin: auto;
+	display: none;
+}
+
+#nom_Station
+{
+	text-align: center;
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+#station_Details
+{
+	width: 85%;
+	height: 75%;
+	left: 6%;
+	top: 15px;
+	position: absolute;
+}
+
+#station_Details li
+{
+	padding-top: 3vh;
+  font-size: 1vw;
+  color: #000;
+}
+
+#station_Details li span
+{
+  font-size: 0.9vw;
+  color: #4048C9;
+}
+
+
+#contact-form
+{
+	max-width: 165px;
+	overflow: hidden;
+	left: 6%;
+	top: 65%;
+	position: absolute;
+}
+
+.contact-form-text, .contact-form-text2
+{
+  width: 8vw;
+  height: 2.5vh;
+	background: #111;
+	padding: 5px 10px;
+	margin: 4px 3px;
+	outline: none;
+	color: #ddd;
+	transition: 0.5s;
+	box-sizing: border-box;
+	border: 0;
+}
+
+.contact-form-text:focus, .contact-form-text2:focus
+{
+	box-shadow: 0 0 3px 2px #0311FC;
+}
+
+#contact-form-btn
+{
+	margin-top: 5px;
+	background: #4048C9;
+	color: #ddd;
+	padding: 5px;
+	border-radius: 18px;
+	cursor: pointer;
+	border: 0;
+	font-size: 12px;
+	text-align: center;
+	width: 8vw;
+}
+
+.Reservation_popup
+{
+  position: relative;
+  width: 92.5%;
+  height: 100px;
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+  background-color: #f4f8fa;
+  border-left: 2px solid #4048C9;
+  box-shadow: 1px 1px 12px #757575;
+  display: none;
+}
+
+#textPopup
+{
+  top: 32px;
+  position: relative;
+  margin: auto;
+}
+
+.Reservation_expire
+{
+  display: none;
+}
+
+.Reservation_expire p
+{
+  top: 5vh;
+  position: relative;
+  margin: auto;
+}
+
+.container
+{
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  padding-top: 11vh;
+}
+
+#containerTitreform
+{
+	position: relative;
+	width: 100%;
+}
+
+#containerTitreform h2
+{
+	width: 20vw;
+}
+
+.container .row100
+{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.container .row100 .col
+{
+  position: relative;
+  width: 96%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+.container .row100 .inputBox
+{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #4048C9;
+}
+
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+
+.container .row100 .inputBox .text
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5S;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox .line
+{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #4048C9;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+  height: 100%;
+}
+
+.container .row100 .inputBox.textarea
+{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea
+{
+  height: 100%;
+  resize: none;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text
+{
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+  height: 100%;
+}
+
+input[type="submit"]
+{
+  border: none;
+  padding: 5px 25px;
+  cursor: pointer;
+  outline: none;
+  background:  #4048C9;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+  transform: scale(1);
+  transition-duration: 300ms;
+  transition-property: transform;
+}
+
+input[type="submit"]:hover
+{
+  transform: scale(1.1);
+}
+
+#containerFooter
+{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #f4f8fa;
+  margin-top: 10vh;
+  box-shadow: 0px 13px 20px 0px #4048C9;
+}
+
+
+#leftSide p, #leftSide a
+{
+	color: #000;
+	justify-content: flex-start;
+	margin: 25px;
+	text-align: center;
+}
+
+#rightSide
+{
+	width: 200px;
+}
+
+#rightSide img
+{
+	width: 80%;
+	justify-content: flex-end;
+}
+
+
+
+@media screen and (max-width: 1074px)
+{
+
+  #navBar
+  {
+    height: 50px;
+  }
+
+	#container_Map
+	{
+		width: 90%;
+	}
+
+	#container_Stations
+	{
+		width: 90%;
+		margin-top: 5%;
+	}
+
+  #station_Details li
+  {
+    font-size: 2vw;
+  }
+
+  #station_Details li span
+  {
+    font-size: 1.8vw;
+  }
+
+  #contact-form
+  {
+    max-width: 200px;
+    left: 65%;
+    top: 40%;
+  }
+
+  #contact-form-btn
+  {
+    width: 17vw;
+    padding: 1.2vh;
+  }
+
+  .contact-form-text, .contact-form-text2
+  {
+    width: 18vw;
+    height: 8%;
+  }
+
+  #station_Details
+  {
+    top: 25%;
+  }
+  
+  .Reservation_popup
+  {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 765px)
+{
+	#iconMarker
+  {
+    width: 53px;
+  }
+
+  .item_icons
+  {
+		margin-top: 14%;
+		margin-left: 15%;
+		margin-right: 15%;
+  }
+
+  .item_icons i
+  {
+    font-size: 70px;
+  }
+
+  .item_icons p
+  {
+    font-size: 15px;
+    top: 15px;
+  }
+
+  #iconMobile
+  {
+    width: 44px;
+  }
+
+  #iconVelo
+  {
+		width: 88px;
+		height: 61px;
+  }
+
+}
+
+
+        /* iphone 6s plus */
+@media screen and (max-width: 414px)
+{
+  .link_menu:hover
+  {
+    padding: 0px 12px;
+  }
+
+	#navElements
+	{
+		margin-right: 0;
+		margin: auto;
+	}
+
+	#navBar img
+	{
+		display: none;
+	}
+
+  .container_Slider
+  {
+    top: 20px;
+  }
+
+  h1
+  {
+    margin-top: 17%;
+  }
+
+	#containerTitreform h2
+	{
+		width: 33vw;
+	}
+
+  #iconMarker
+  {
+    width: 42px;
+  }
+
+  .item_icons
+  {
+    margin-top: 14%;
+  }
+
+  .item_icons i
+  {
+    font-size: 55px;
+  }
+
+  .item_icons p
+  {
+    font-size: 15px;
+    top: 15px;
+  }
+
+  #iconMobile
+  {
+    width: 35px;
+  }
+
+  #iconVelo
+  {
+    width: 70px;
+    height: 49px;
+  }
+
+  #container_Stations
+  {
+		width: 90%;
+		margin-top: 10%;
+  }
+
+  #station_Details li
+  {
+    font-size: 3.5vw;
+  }
+
+  #station_Details li span
+  {
+    font-size: 2.8vw;
+  }
+
+  #contact-form
+  {
+    max-width: 165px;
+    left: 6%;
+    top: 65%;
+  }
+
+  #contact-form-btn
+  {
+    width: 35vw;
+    padding: 4px;
+  }
+
+  .contact-form-text, .contact-form-text2
+  {
+    width: 36vw;
+    height: 2.9vh;
+    font-size: 2.8vw;
+  }
+
+  #station_Details
+  {
+    top: 15px;
+  }
+
+	.container .row100 .col
+	{
+		width: 92%;
+  }
+  
+  #textPopup
+  {
+    top: 3.5vh;
+    font-size: 3.5vw;
+    padding: 0 4vw;
+  }
+
+}
+
+        /* iphone 6s*/
+@media screen and (max-width: 375px)
+{
+}
+
+        /* iphone 5 */
+@media screen and (max-width: 320px)
+{
+
+	.link_menu
+	{
+		font-size: 12px;
+	}
+
+	.container .row100 .col
+	{
+		width: 78%;
+	}
+}
