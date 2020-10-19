@@ -31,6 +31,11 @@
   font-family: 'roboto_med';
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 #navBar
 {
   display: flex;

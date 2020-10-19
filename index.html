@@ -14,9 +14,6 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
-  <script src="map.js" async></script>
-  <script src="popup.js" async></script>
-
 </head>
 
 <body>
@@ -26,7 +23,7 @@
       <ul id="navElements">
         <li><a class="link_menu" href="#page">Home</a></li>
         <li><a class="link_menu" href="#container_Velos">Réservations</a></li>
-        <li><a class="link_menu" href="#corps">Contact</a></li>
+        <li><a class="link_menu" href="#contact">Contact</a></li>
       </ul>
     </div>
 
@@ -106,7 +103,7 @@
       <p id="text_expire">réservation expiré</p>
     </div>
 
-      <div class="container">
+      <div class="container" id="contact">
         <div id="containerTitreform">
           <h2>Contact Us</h2>
         </div>
@@ -170,6 +167,9 @@
         </div>
       </div>
     </footer>
+
+  <script src="map.js" async></script>
+  <script src="popup.js" async></script>
 </body>
 
 </html>
