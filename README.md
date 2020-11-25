@@ -20,5 +20,5 @@ npm install
 
 ## Show your support
 
-Give a ⭐️ if like this project!
+Give a ⭐️ if you like this project!
 
